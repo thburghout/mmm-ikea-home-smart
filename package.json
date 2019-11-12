@@ -1,0 +1,15 @@
+{
+  "name": "mmm-ikea-home-smart",
+  "version": "0.1.0",
+  "description": "",
+  "main": "mmm-ikea-home-smart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ikea-tradfri": "^3.7.0"
+  }
+}
