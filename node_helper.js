@@ -1,5 +1,6 @@
-var NodeHelper = require("node_helper");
+NodeHelper = require("node_helper");
 Tradfri = require("ikea-tradfri");
+const { getSunrise, getSunset } = require('sunrise-sunset-js');
 
 module.exports = NodeHelper.create({
 
@@ -12,6 +13,7 @@ module.exports = NodeHelper.create({
 
         this.notificationHandlers = {
             'IKEA_HOME_SMART_SWITCH_LIGHTS': this.switchLights.bind(this),
+            'IKEA_HOME_SMART_SWITCH_LIGHTS_IF_DARK': this.switchLightsIfDark.bind(this),
         };
     },
 
@@ -48,4 +50,12 @@ module.exports = NodeHelper.create({
             }
         });
     },
+
+    switchLightsIfDark: function () {
+        const now = new Date(Date.now());
+        const pos = this.config.location;
+        if (now > getSunset(pos.latitude, pos.longitude) || now < getSunrise(pos.latitude, pos.longitude)) {
+            this.switchLights(true);
+        }
+    }
 });

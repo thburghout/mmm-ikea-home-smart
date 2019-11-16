@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ikea-tradfri": "^3.7.0"
+    "ikea-tradfri": "^3.7.0",
+    "sunrise-sunset-js": "^2.1.1"
   }
 }

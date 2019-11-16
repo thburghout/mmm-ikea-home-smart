@@ -43,6 +43,10 @@ var config = {
                     psk: "abcdefghijklmnop",
                 },
                 host: "192.168.1.103",
+                location: {
+                    latitude: 52.0,
+                    longitude: 6.0,
+                }
             }
         }
     ]
@@ -57,4 +61,6 @@ var config = {
 | `host`     | *Required* address to reach the gateway on.
 | `deviceMatchString` | *Optional* devices whose name contain this string are considered lights when turning all lights on or off. <br><br> **Type:** `string`<br>**Default:** `"light"` 
 
- 
+# Future features
+
+* Command registration for control via Telegram or other command users. 
