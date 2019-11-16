@@ -59,7 +59,20 @@ var config = {
 |------------|-----------
 | `identity` | *Required* credentials used for authenticating to the Tradfri Gateway. See Installation.
 | `host`     | *Required* address to reach the gateway on.
-| `deviceMatchString` | *Optional* devices whose name contain this string are considered lights when turning all lights on or off. <br><br> **Type:** `string`<br>**Default:** `"light"` 
+| `deviceMatchString` | *Optional* devices whose name contain this string are considered lights when turning all lights on or off. <br><br> **Type:** `string`<br>**Default:** `"light"`
+| `location` | *Required* for location based sunset estimation.
+
+## Notification interface
+
+This module is controlled via notifications.
+These are listed below.
+Please note that "all available lights" are the devices which have `config.deviceMatchString`
+(default: `light`) in their name.
+
+| Notification | Payload type | Description |
+|--------------|--------------|-------------|
+| `IKEA_HOME_SMART_SWITCH_LIGHTS` | `bool` | Turns on/off all available lights.
+| `IKEA_HOME_SMART_SWITCH_LIGHTS_IF_DARK` | - | Turns on all available lights **if** the sun is currently set. 
 
 # Future features
 
