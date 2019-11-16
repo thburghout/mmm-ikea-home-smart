@@ -74,6 +74,7 @@ Please note that "all available lights" are the devices which have `config.devic
 | `IKEA_HOME_SMART_SWITCH_LIGHTS` | `bool` | Turns on/off all available lights.
 | `IKEA_HOME_SMART_SWITCH_LIGHTS_IF_DARK` | - | Turns on all available lights **if** the sun is currently set. 
 
-# Future features
+# Future features & known issues
 
-* Command registration for control via Telegram or other command users. 
+* Command registration for control via Telegram or other command users.
+* Currently does not keep track of changes in lights and other devices.
