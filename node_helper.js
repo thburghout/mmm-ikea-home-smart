@@ -1,5 +1,5 @@
 var NodeHelper = require("node_helper");
-Tradfri = require('ikea-tradfri');
+Tradfri = require("ikea-tradfri");
 
 module.exports = NodeHelper.create({
 
